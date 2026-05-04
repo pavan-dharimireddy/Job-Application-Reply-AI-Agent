@@ -16,18 +16,18 @@ The system transforms passive email tracking into an **active, intelligent workf
 
 ```mermaid
 flowchart LR
-    A[Gmail Trigger] --> B[LLM(Classify + Extract + Generate)]
+    A[Gmail Trigger] --> B[LLM: Classify Extract Generate]
     B --> C{Category Check}
 
-    C -->|Interview| D[Google Calendar (Create Event + Reminders)]
+    C -->|Interview| D[Google Calendar - Create Event and Reminders]
     C -->|Rejection| E[WhatsApp Notification]
-    C -->|Selected/Offer| E
+    C -->|Selected or Offer| E
 
-    D --> E[WhatsApp Notification]
+    D --> E
 
-    E --> F[Gmail Draft Auto Reply(Knowledge Source --> Google docs)]
+    E --> F[Gmail Draft Auto Reply - Templates from Google Docs]
 
-    C -->|Other| G[Stop / Ignore]
+    C -->|Other| G[Stop or Ignore]
 ```
 
 ---
